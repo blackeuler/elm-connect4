@@ -1,7 +1,5 @@
 module Main exposing (..)
 
-import Html.Attributes exposing (value)
-
 
 type alias Position =
     { x : Int
