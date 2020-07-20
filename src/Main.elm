@@ -1,4 +1,7 @@
-module Main exposing (..)
+module Main exposing (main)
+
+import Element
+import Html
 
 
 type alias Position =
@@ -31,7 +34,7 @@ type alias Column =
 
 
 type Player
-    = Ome Value
+    = One Value
     | Two Value
 
 
@@ -39,3 +42,19 @@ type alias Model =
     { turn : Player
     , board : Board
     }
+
+
+main : Html.Html msg
+main =
+    view init
+
+
+init : Model
+init =
+    { turn = One Red, board = [] }
+
+
+view : Model -> Html.Html msg
+view model =
+    Element.layout []
+        (Element.column [] [])
